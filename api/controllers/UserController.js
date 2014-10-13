@@ -4,11 +4,17 @@
 var _ = require('lodash');
 
 module.exports = function (UserModel, userView, response, next, temperatureService) {
-    return {
-        getPage : getPage.bind(null, UserModel, userView, response, next, temperatureService)
-        // , getApi : ...
-    };
+
+    return UserController;
+
+    function UserController() {
+        return {
+            getPage : getPage.bind(null, UserModel, userView, response, next, temperatureService)
+            // , getApi : ...
+        };
+}
 };
+
 
 function getPage(UserModel, userView, response, next, temperatureService) {
     UserModel
