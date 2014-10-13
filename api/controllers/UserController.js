@@ -8,6 +8,12 @@ module.exports = function (UserModel, userView, response, next, temperatureServi
     return UserController;
 
     function UserController() {
+        console.log('---- uc ------');
+        console.log('---- uc ------');
+        console.log('---- uc ------');
+        console.log('---- uc ------');
+        console.log('---- uc ------');
+        console.log('---- uc ------');
         return {
             getPage : getPage.bind(null, UserModel, userView, response, next, temperatureService)
             // , getApi : ...
