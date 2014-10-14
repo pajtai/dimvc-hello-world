@@ -1,0 +1,7 @@
+include mixins/head
+doctype html
+html(lang="en")
+    +head
+    each person in model.users
+        div
+            a(href='/user/#{person._id}') #{person.name}

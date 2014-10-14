@@ -3,6 +3,6 @@
 
 module.exports = function (constantsService) {
     return function() {
-        return constantsService.hot;
-    }
+        return constantsService().hot;
+    };
 };

@@ -3,9 +3,11 @@
 
 module.exports = function (userController) {
     return {
-        '/user/:id' : {
+        '/user/:id?' : {
+            controller : userController,
+            plural : '/users/?'
             // middleware : [...],
-            get : userController.getPage
+            // getMiddleware : [...]
         }
     };
 };

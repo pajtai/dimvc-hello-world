@@ -2,7 +2,9 @@
 'use strict';
 
 module.exports = function () {
-    return {
-        hot : '¡muy caliente!'
-    }
+    return function() {
+        return {
+            hot : '¡muy caliente!'
+        };
+    };
 };
