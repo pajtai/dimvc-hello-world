@@ -2,18 +2,16 @@
 'use strict';
 
 var _ = require('lodash'),
-    sillyname = require('sillyname')
+    sillyname = require('sillyname');
 
 module.exports = function (UserModel, userView, usersView, temperatureService, log) {
 
     return {
-        get : get,
-        post : post,
-        plural : plural
-        // , getApi : ...
+        showUser : showUser,
+        showUsers : showUsers
     };
 
-    function get() {
+    function showUser() {
         return function(req, res, next) {
             UserModel
                 .findOneQ({
@@ -56,7 +54,7 @@ module.exports = function (UserModel, userView, usersView, temperatureService, l
         };
     }
 
-    function plural() {
+    function showUsers() {
         return function(req, res, next) {
             UserModel
                 .find()
