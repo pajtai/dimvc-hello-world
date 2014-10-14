@@ -1,13 +1,11 @@
 /*jshint node:true */
 'use strict';
 
-module.exports = function (UserController) {
-    console.log('=-=-=-=-=-=-=');
-    console.log(UserController.toString());
+module.exports = function (userController) {
     return {
         '/user/:id' : {
             // middleware : [...],
-            get : (new UserController()).getPage
+            get : userController.getPage
         }
-    }
+    };
 };
