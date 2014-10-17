@@ -14,5 +14,10 @@
     "mongoose-auto-increment": "^3.0.8",
     "mongoose-q": "0.0.13",
     "sillyname": "0.0.3"
+  },
+  "devDependencies": {
+    "chai": "~1.9.1",
+    "sinon": "^1.10.3",
+    "sinon-chai": "^2.6.0"
   }
 }
